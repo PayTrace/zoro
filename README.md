@@ -1,4 +1,4 @@
-# Zoro
+# Zoro [![Build Status](https://secure.travis-ci.org/PayTrace/zoro.png)](http://travis-ci.org/PayTrace/zoro)
 
 A gem for integrating with Zoho.
 
