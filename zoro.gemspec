@@ -9,11 +9,14 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Trevor Redfern"]
   gem.email         = ["trevor@paytrace.com"]
   gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.summary       = %q{Ruby gem for integration with Zoho CRM}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+
+  gem.add_development_dependency('rake')
+  gem.add_development_dependency('mocha')
 end

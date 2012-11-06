@@ -1,6 +1,6 @@
 # Zoro
 
-TODO: Write a gem description
+A gem for integrating with Zoho.
 
 ## Installation
 
