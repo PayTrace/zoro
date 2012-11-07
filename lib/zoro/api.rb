@@ -9,7 +9,7 @@ module Zoro
     def insert_records(record)
       url = format_url(record.zoho_module, "insertRecords")
 
-      Zoro.http_connection.post(url)
+      Zoro.http_connection.post(url, record)
     end
   end
 end
