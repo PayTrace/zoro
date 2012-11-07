@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.version       = Zoro::VERSION
   gem.authors       = ["Trevor Redfern"]
   gem.email         = ["trevor@paytrace.com"]
-  gem.description   = %q{TODO: Write a gem description}
+  gem.description   = %q{Simple integration library into Zoho CRM}
   gem.summary       = %q{Ruby gem for integration with Zoho CRM}
   gem.homepage      = ""
 

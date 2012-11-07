@@ -1,4 +1,6 @@
 require "zoro/version"
+require 'zoro/api'
+require 'zoro/lead'
 require 'faraday'
 
 module Zoro
