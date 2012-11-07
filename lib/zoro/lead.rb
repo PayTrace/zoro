@@ -16,6 +16,10 @@ module Zoro
       @fields[field_name] = value
     end
 
+    def zoho_module
+      ZOHO_MODULE
+    end
+
     def to_xml
       xml_map = Hash.new
       xml_map['row'] = {

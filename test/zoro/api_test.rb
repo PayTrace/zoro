@@ -13,9 +13,9 @@ describe Zoro::Api do
     #Stub HTTP
     Zoro.auth_token = "1234"
     stubs = stub_http
-    stubs.post("/crm/private/xml/Leads/insertRecords") {[200, {}, 'foo']}
+    stubs.get("/crm/private/xml/Leads/insertRecords") {[200, {}, 'foo']}
 
-    record = stub(:zoho_module => "Leads")
+    record = stub(:zoho_module => "Leads", :to_xml => '<somexml>foo</somexml>')
     api = Zoro::Api.new
     api.insert_records(record)
     stubs.verify_stubbed_calls

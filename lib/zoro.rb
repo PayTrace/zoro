@@ -9,6 +9,8 @@ module Zoro
   attr_accessor :auth_token, :http_connection
 
   def http_connection
-    @http_connection ||= Faraday::Connection.new
+    @http_connection ||= Faraday::Connection.new do |conn|
+      conn.response :logger
+    end
   end
 end
