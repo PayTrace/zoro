@@ -2,6 +2,7 @@ require "zoro/version"
 require 'zoro/api'
 require 'zoro/lead'
 require 'faraday'
+require 'xmlsimple'
 
 module Zoro
   extend self

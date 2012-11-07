@@ -13,7 +13,19 @@ describe Zoro::Lead do
   end
 
   it "defines it's module as Lead" do
+    Zoro::Lead::ZOHO_MODULE.must_equal "Leads"
+  end
+
+  it "can serialize itself to xml" do
     lead = Zoro::Lead.new
-    lead.zoho_module.must_equal "Leads"
+    lead.add_field "First Name", "foo"
+    lead.add_field "Last Name", "bar"
+    lead.to_xml.must_equal %q{<Leads>
+  <row no="1">
+    <FL val="First Name">foo</FL>
+    <FL val="Last Name">bar</FL>
+  </row>
+</Leads>
+}
   end
 end

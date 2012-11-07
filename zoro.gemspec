@@ -20,4 +20,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency('rake')
   gem.add_development_dependency('mocha')
   gem.add_dependency('faraday')
+  gem.add_dependency('xml-simple')
 end

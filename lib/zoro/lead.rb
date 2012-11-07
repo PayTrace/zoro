@@ -1,10 +1,8 @@
 module Zoro
   class Lead
-    attr_accessor :first_name, :last_name, :company, :phone, :email, :api
+    ZOHO_MODULE = "Leads"
+    attr_accessor :fields, :api
 
-    #
-    # Takes the lead and sends it to zoho
-    #
     def save!
       api.insert_records(self)
     end
@@ -13,8 +11,20 @@ module Zoro
       @api ||= Zoro::Api.new
     end
 
-    def zoho_module
-      "Leads"
+    def add_field(field_name, value)
+      @fields ||= {}
+      @fields[field_name] = value
+    end
+
+    def to_xml
+      xml_map = Hash.new
+      xml_map['row'] = {
+        'no' => '1',
+        'FL' => @fields.map do |k, v|
+          { 'val' => k, 'content' => v}
+        end
+      }
+      XmlSimple.xml_out(xml_map, :RootName => ZOHO_MODULE)
     end
   end
 end

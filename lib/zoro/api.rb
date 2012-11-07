@@ -8,7 +8,7 @@ module Zoro
 
     def insert_records(record)
       url = format_url(record.zoho_module, "insertRecords")
-      Zoro.http_connection.post(url, record, :newformat => 1, :authtoken => Zoro.auth_token, :scope => 'crmapi')
+      Zoro.http_connection.post(url, :xmldata => record, :newformat => 1, :authtoken => Zoro.auth_token, :scope => 'crmapi')
     end
   end
 end
