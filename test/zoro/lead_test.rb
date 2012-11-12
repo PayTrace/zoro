@@ -28,4 +28,10 @@ describe Zoro::Lead do
 </Leads>
 }
   end
+
+  it "can be constructed with fields" do
+    lead = Zoro::Lead.new({"First Name" => "Foo", "Last Name" => "Bar"})
+    lead.fields["First Name"].must_equal "Foo"
+    lead.fields["Last Name"].must_equal "Bar"
+  end
 end

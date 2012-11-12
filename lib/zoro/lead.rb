@@ -3,6 +3,10 @@ module Zoro
     ZOHO_MODULE = "Leads"
     attr_accessor :fields, :api
 
+    def initialize(data = {})
+      @fields = {}.merge(data)
+    end
+
     def save!
       api.insert_records(self)
     end
@@ -12,7 +16,6 @@ module Zoro
     end
 
     def add_field(field_name, value)
-      @fields ||= {}
       @fields[field_name] = value
     end
 
