@@ -18,7 +18,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First we need an authentication token setup for requests:
+
+    Zoro.auth_token = "SomeAuthToken"
+
+You can customize Faraday behavior for logging or other things by replacing the Zoro connection. I'll probably change this down stream to allow more configurable.
+
+    Zoro.connection = Faraday::Connection.new |conn| do
+      conn.request :url_encoded
+    end
+
+Current this is still very much a work in development, but for generating leads the following works:
+
+    lead = Zoro::Lead.new
+    lead.add_field "First Name", "Foo"
+    lead.add_field "Last Name", "Bar"
+    lead.save!
 
 ## Contributing
 
