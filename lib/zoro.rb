@@ -1,6 +1,8 @@
 require "zoro/version"
 require 'zoro/api'
+require 'zoro/record'
 require 'zoro/lead'
+require 'zoro/account'
 require 'faraday'
 require 'xmlsimple'
 

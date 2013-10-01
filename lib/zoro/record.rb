@@ -1,14 +1,10 @@
 module Zoro
   class Record
-    attr_reader :module, :fields
+    attr_reader :zoho_module, :fields
 
     def initialize(zoho_module: nil)
-      @module = zoho_module
+      @zoho_module = zoho_module
       @fields = {}
-    end
-
-    def set_field(name, value)
-      @fields[name] = value
     end
 
     def to_xml
@@ -19,7 +15,7 @@ module Zoro
           { 'val' => k, 'content' => v}
         end
       }
-      XmlSimple.xml_out(xml_map, :RootName => @module)
+      XmlSimple.xml_out(xml_map, :RootName => @zoho_module)
     end
   end
 end

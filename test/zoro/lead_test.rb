@@ -13,7 +13,8 @@ describe Zoro::Lead do
   end
 
   it "defines it's module as Lead" do
-    Zoro::Lead::ZOHO_MODULE.must_equal "Leads"
+    l = Zoro::Lead.new
+    l.zoho_module.must_equal "Leads"
   end
 
   it "can serialize itself to xml" do

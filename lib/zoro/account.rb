@@ -1,5 +1,6 @@
 module Zoro
-  class Account
+  class Account < Record
+
   end
 end
 
