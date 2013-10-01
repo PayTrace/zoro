@@ -1,4 +1,4 @@
-# Zoro [![Build Status](https://www.codeship.io/projects/477586c0-0cdf-0131-c895-42ce94ecf3ea/status)]
+# Zoro [Build Status](https://www.codeship.io/projects/477586c0-0cdf-0131-c895-42ce94ecf3ea/status)
 
 A gem for integrating with Zoho.
 
