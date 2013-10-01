@@ -15,4 +15,12 @@ describe Zoro::Record do
 </FOOBAR>
 }
   end
+
+  it "relays itself to zoho api" do
+    r = Zoro::Record.new(zoho_module: "turtle")
+    api = stub
+    api.expects(:insert_records).with(r)
+    r.api = api
+    r.save!
+  end
 end

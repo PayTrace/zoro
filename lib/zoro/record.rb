@@ -7,6 +7,18 @@ module Zoro
       @fields = {}
     end
 
+    def api=(api)
+      @api = api
+    end
+
+    def api
+      @api ||= Zoro::Api.new
+    end
+
+    def save!
+      api.insert_records(self)
+    end
+
     def to_xml
       xml_map = Hash.new
       xml_map['row'] = {
