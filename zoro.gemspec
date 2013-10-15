@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["trevor@paytrace.com"]
   gem.description   = %q{Simple integration library into Zoho CRM. Will be enhanced to provide two way integration with library over time.}
   gem.summary       = %q{Ruby gem for integration with Zoho CRM}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/PayTrace/zoro"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
