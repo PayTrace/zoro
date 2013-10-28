@@ -2,7 +2,7 @@ module Zoro
   class Record
     attr_reader :zoho_module, :fields
 
-    def initialize(zoho_module= self.class.name)
+    def initialize(zoho_module= self.class.name.split("::").last)
       @zoho_module = zoho_module
       @fields = {}
     end
