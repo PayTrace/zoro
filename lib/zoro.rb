@@ -3,6 +3,7 @@ require 'zoro/api'
 require 'zoro/record'
 require 'zoro/lead'
 require 'zoro/account'
+require 'zoro/field_name'
 require 'faraday'
 require 'xmlsimple'
 
