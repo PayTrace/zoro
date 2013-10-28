@@ -10,12 +10,12 @@ describe Zoro::Record do
     r.fields["Foo"] = "a foo"
     r.fields["Bar"] = "a bar"
     xml = r.to_xml
-    xml.must_equal %q{<TestRecord>
+    xml.must_equal %q{<TestRecords>
   <row no="1">
     <FL val="Foo">a foo</FL>
     <FL val="Bar">a bar</FL>
   </row>
-</TestRecord>
+</TestRecords>
 }
   end
 
