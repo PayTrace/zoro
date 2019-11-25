@@ -2,6 +2,9 @@
 
 A gem for integrating with Zoho.
 
+# hosted on Gemfury
+upload prebuild package on zoro host.
+
 ## Installation
 
 Add this line to your application's Gemfile:
