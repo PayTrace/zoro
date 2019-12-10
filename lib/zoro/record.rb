@@ -31,7 +31,7 @@ module Zoro
     end
 
     def method_missing(name, *args, &block)
-      property_name = name.to_s
+      property_name = Zoro::FieldName.make_field(name.to_s)
 
       assignment = name.to_s.match(/=/)
       if assignment
