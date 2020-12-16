@@ -18,9 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-First we need an authentication token setup for requests:
+1. We will need to follow step 1,2,3 on zoho oAuth Authentication to get following set up:  
+2. From above step1 we will need a refresh token, client_id, client_secret, grant_type setup for requests for V2 Api:  
 
-    Zoro.auth_token = "SomeAuthToken"
+    Zoro.refresh_token = "SomeAuthToken"  
+    Zoro.client_id    = "YourClientId"
+    Zoro.client_secret = "YourClientSecret"
+    Zoro.grant_type   = "refresh_token"
 
 You can customize Faraday behavior for logging or other things by replacing the Zoro connection. I'll probably change this down stream to allow more configurable.
 
