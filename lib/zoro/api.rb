@@ -27,7 +27,7 @@ module Zoro
     
     def insert_records(record)
       url = format_url(record.zoho_module, "") # v2 no longer needs the insertRecords
-      data = { data: [record] }.to_json()
+      data = { data: [record.fields] }.to_json()
 
       Zoro.http_connection.post do |req|
         req.url url
