@@ -9,14 +9,14 @@ module Zoro
     end
 
     def get_auth_token
-      refresh_token_url= "https://accounts.zoho.com/oauth/v2/token"
+      refresh_token_url = "https://accounts.zoho.com/oauth/v2/token"
       data = {  :refresh_token => Zoro.refresh_token, :grant_type => Zoro.grant_type, 
                 :client_id => Zoro.client_id , :client_secret => Zoro.client_secret 
              }
       
       response = Zoro.http_connection.post do |req|
         req.headers['Content-Type'] = "application/x-www-form-urlencoded"
-        req.url token_url
+        req.url refresh_token_url
         req.body = URI.encode_www_form(data)
       end
       
