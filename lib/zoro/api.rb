@@ -16,7 +16,7 @@ module Zoro
       
       response = Zoro.http_connection.post do |req|
         req.headers['Content-Type'] = "application/x-www-form-urlencoded"
-        req.url token_url
+        req.url refresh_token_url
         req.body = URI.encode_www_form(data)
       end
       
