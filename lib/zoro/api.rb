@@ -21,7 +21,7 @@ module Zoro
       end
       
       response_obj = JSON.parse(response.body) 
-      Zoro.refresh_token = "Zoho-oauthtoken #{response_obj["access_token"]}" if response_obj.has_key?('access_token')
+      auth_token = "Zoho-oauthtoken #{response_obj["access_token"]}" if response_obj.has_key?('access_token')
     
     end
     
